@@ -1,0 +1,6 @@
+---
+# defaults file for nginx-role
+packages:
+  - vim
+  - epel-release
+  - nginx

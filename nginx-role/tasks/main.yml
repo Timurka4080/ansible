@@ -1,0 +1,14 @@
+---
+# tasks file for nginx-role
+- name: NGINX | Install and configure NGINX
+  hosts: nginx
+  become: true
+  vars:
+      nginx_listen_port: 8080 
+
+  tasks:
+    - name: Install packages
+      include: install_packages.yml
+
+    - name: Nginx config
+      include: nginx_config.yml      

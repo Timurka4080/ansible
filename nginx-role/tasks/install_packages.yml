@@ -1,0 +1,10 @@
+---
+- name: NGINX | Install packages
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop: 
+    - epel-release
+    - nginx
+  tags:
+    - packages
